@@ -10,7 +10,22 @@ const substraction = document.querySelector("#sub")
 const mult = document.querySelector("#mult")
 const division = document.querySelector("#divide")
 const equal = document.querySelector("#equal")
+const clear = document.querySelector("#clear")
 
+function sum(a, b){
+    return a+b;
+}
+function substract(a, b){
+    return a-b
+}
+function multiply(a, b){
+    return a*b
+}
+function divide(a, b){
+    return a/b
+}
+
+// Allows user to input data
 function input()
 {
     numbers.forEach((number) =>
@@ -24,6 +39,7 @@ function input()
     )
 }
 
+// Displays result on the screen
 function equals()
 {
     equal.addEventListener("click", ()=>
@@ -38,7 +54,6 @@ function equals()
                 result = sum(a,b)
                 console.log(result)
                 display.textContent = result.toString()
-                reset()
                 break;
             case "sub":
                 c = ""
@@ -62,13 +77,22 @@ function equals()
     })
 }
 
+// Empties the display
 function reset(){
     content = ""
     display.textContent = content
 }
 
+clear.addEventListener("click", ()=>
+    {
+        reset();
+        a = null;
+        b = null;
+    })
+
 input()
 
+// Stores data
 function save()
 {
     a === null ? a = parseFloat(display.textContent) : b = parseFloat(display.textContent)
@@ -106,17 +130,3 @@ division.addEventListener("click", ()=>
         c = "divide"
         equals()
     })
-
-
-function sum(a, b){
-    return a+b;
-}
-function substract(a, b){
-    return a-b
-}
-function multiply(a, b){
-    return a*b
-}
-function divide(a, b){
-    return a/b
-}
