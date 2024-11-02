@@ -25,6 +25,7 @@ body{
     border: 2px solid black;
     border-radius: 1rem;
     background-color: rgb(215, 251, 183);
+    font-size: 2rem;
 }
 
 .buttons{
@@ -49,6 +50,23 @@ body{
 
 .number{
     width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 5rem;
+    background-color: rgba(83, 198, 255, 0.455);
+    font-size: 2rem;
+}
+
+#equal{
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+    border: 2px solid black;
+    border-radius: 5rem;
+}
+
+#zero{
+    width: 80px;
     height: 50px;
     border: 2px solid black;
     border-radius: 5rem;
